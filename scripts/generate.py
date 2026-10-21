@@ -261,7 +261,7 @@ def hero(u: dict, stats: dict) -> str:
     .tw {{ animation: tw 3.2s ease-in-out infinite; }}
     .blink {{ animation: blink 2.4s ease-in-out infinite; }}
     .glitch {{ animation: glitch 6s steps(1) infinite; }}
-    .up {{ opacity: 0; animation: up .7s ease-out forwards; }}
+    .up {{ animation: up .7s ease-out backwards; }}
     .scan {{ animation: scan 8s linear infinite; }}
     @keyframes spin {{ to {{ transform: rotate(360deg); }} }}
     @keyframes tw {{ 0%,100% {{ opacity: 1; }} 50% {{ opacity: .2; }} }}
@@ -319,11 +319,11 @@ def highlights() -> str:
 {card_open(w, h, "Áreas de foco")}
   <defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{NAVY}"/><stop offset="1" stop-color="{BG}"/></linearGradient></defs>
   <style>
-    .up {{ opacity: 0; animation: up .7s ease-out forwards; }}
-    .bar {{ transform: scaleX(0); animation: grow 1.4s cubic-bezier(.2,.8,.2,1) forwards; }}
+    .up {{ animation: up .7s ease-out backwards; }}
+    .bar {{ animation: grow 1.4s cubic-bezier(.2,.8,.2,1) backwards; }}
     .edge {{ stroke-dasharray: 140 1900; animation: run 7s linear infinite; }}
     @keyframes up {{ from {{ opacity: 0; transform: translateY(8px); }} to {{ opacity: 1; transform: none; }} }}
-    @keyframes grow {{ to {{ transform: scaleX(1); }} }}
+    @keyframes grow {{ from {{ transform: scaleX(0); }} to {{ transform: scaleX(1); }} }}
     @keyframes run {{ to {{ stroke-dashoffset: -2040; }} }}
   </style>
   {''.join(cards)}
@@ -348,7 +348,7 @@ def stack() -> str:
     return f"""
 {card_open(w, h, "Stack: " + ", ".join(STACK))}
   <style>
-    .up {{ opacity: 0; animation: up .5s ease-out forwards; }}
+    .up {{ animation: up .5s ease-out backwards; }}
     .glint {{ opacity: 0; animation: glint {len(STACK) * .45:.1f}s ease-in-out infinite; }}
     @keyframes up {{ from {{ opacity: 0; transform: translateY(6px); }} to {{ opacity: 1; transform: none; }} }}
     @keyframes glint {{ 0%,100% {{ opacity: 0; }} 4% {{ opacity: 1; }} 12% {{ opacity: 0; }} }}
@@ -436,10 +436,10 @@ def timeline(repos: list[dict]) -> str:
 {card_open(w, h, "Línea de tiempo de proyectos")}
   <defs><linearGradient id="tl" x1="0" x2="1"><stop offset="0" stop-color="{NAVY_2}"/><stop offset="1" stop-color="{ACCENT_2}"/></linearGradient></defs>
   <style>
-    .line {{ stroke-dasharray: {x1 - x0}; stroke-dashoffset: {x1 - x0}; animation: draw 1.6s ease-out forwards; }}
-    .up {{ opacity: 0; animation: up .6s ease-out forwards; }}
+    .line {{ stroke-dasharray: {x1 - x0}; animation: draw 1.6s ease-out backwards; }}
+    .up {{ animation: up .6s ease-out backwards; }}
     .now {{ animation: blink 1.6s ease-in-out infinite; }}
-    @keyframes draw {{ to {{ stroke-dashoffset: 0; }} }}
+    @keyframes draw {{ from {{ stroke-dashoffset: {x1 - x0}; }} to {{ stroke-dashoffset: 0; }} }}
     @keyframes up {{ from {{ opacity: 0; transform: translateY(6px); }} to {{ opacity: 1; transform: none; }} }}
     @keyframes blink {{ 50% {{ opacity: .2; }} }}
   </style>
@@ -468,7 +468,7 @@ def momentum(stats: dict) -> str:
     return f"""
 {card_open(w, h, "Estadísticas de GitHub")}
   <style>
-    .up {{ opacity: 0; animation: up .6s ease-out forwards; }}
+    .up {{ animation: up .6s ease-out backwards; }}
     .blink {{ animation: blink 2.4s ease-in-out infinite; }}
     @keyframes up {{ from {{ opacity: 0; transform: translateY(8px); }} to {{ opacity: 1; transform: none; }} }}
     @keyframes blink {{ 50% {{ opacity: .25; }} }}
@@ -503,9 +503,9 @@ def heatmap(u: dict, stats: dict) -> str:
     return f"""
 {card_open(w, h, "Mapa de contribuciones")}
   <style>
-    .hm {{ opacity: 0; animation: in .4s ease-out forwards; }}
-    .hot {{ animation: in .4s ease-out forwards, glow 3s ease-in-out 2s infinite; }}
-    @keyframes in {{ to {{ opacity: 1; }} }}
+    .hm {{ animation: in .4s ease-out backwards; }}
+    .hot {{ animation: in .4s ease-out backwards, glow 3s ease-in-out 2s infinite; }}
+    @keyframes in {{ from {{ opacity: 0; }} to {{ opacity: 1; }} }}
     @keyframes glow {{ 0%,100% {{ opacity: 1; }} 50% {{ opacity: .55; }} }}
   </style>
   <rect width="{w}" height="{h}" rx="20" fill="{BG}" stroke="{BORDER}"/>
