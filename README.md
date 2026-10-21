@@ -1,95 +1,76 @@
 <div align="center">
 
-<p><sub>LAZARO GONZALEZ · CÓRDOBA, ARGENTINA · EN VIVO</sub></p>
+<img src="assets/header.svg" width="100%" alt="Lazaro Gonzalez — Senior Systems Analyst · Backend & Data Engineer · Córdoba, Argentina" />
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/hero?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&variant=living-identity&label=Lazaro&v=wow-living-identity-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/hero?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&variant=living-identity&label=Lazaro&v=wow-living-identity-1&mode=dark" width="100%" alt="Retrato animado de Lazaro" />
-</picture>
+<br/>
 
-<p><strong>Analista de Sistemas Senior · Backend & Datos</strong> · Córdoba, Argentina</p>
-<p>Líder técnico de un equipo de seis personas. Desarrollo software en Python, pipelines de datos e integraciones para el sector de medicina prepaga.</p>
-<p><a href="https://github.com/gonzalezlazaro">GitHub</a></p>
+<img src="https://img.shields.io/badge/Python-0b1f44?style=for-the-badge&logo=python&logoColor=60a5fa" alt="Python" />
+<img src="https://img.shields.io/badge/SQL_Server-0b1f44?style=for-the-badge&logo=microsoftsqlserver&logoColor=60a5fa" alt="SQL Server" />
+<img src="https://img.shields.io/badge/Azure-0b1f44?style=for-the-badge&logo=microsoftazure&logoColor=60a5fa" alt="Azure" />
+<img src="https://img.shields.io/badge/Airflow-0b1f44?style=for-the-badge&logo=apacheairflow&logoColor=60a5fa" alt="Apache Airflow" />
+
 </div>
 
-<p align="center"><sub>✦ ───────────────────────────── ✦</sub></p>
+<br/>
 
-<h2>Quién soy</h2>
+<img src="assets/title-sobre-mi.svg" width="100%" alt="01 / Sobre mí" />
 
-<table width="100%" style="display:table;width:100%;table-layout:fixed;">
-<tr>
-<td width="62%" valign="top">
-<p>Diseño y pongo en producción sistemas internos de punta a punta: APIs, herramientas de calidad de datos, procesos ETL y reportes sobre grandes bases SQL Server.</p>
-<p><strong>Foco:</strong> <code>Python</code> · <code>SQL Server</code> · <code>Azure</code> · <code>Airflow</code></p>
-<p><sub>Ingeniería pragmática, datos limpios y automatizar lo repetitivo.</sub></p>
-</td>
-<td width="38%" valign="top">
-<p><code>AHORA</code></p>
-<p>🏢 Liderando un equipo bajo Scrum<br />
-🔗 Integraciones de mensajería y APIs<br />
-☁️ Migrando servicios a Azure<br />
-📊 Pipelines de datos con Airflow</p>
-</td>
-</tr>
-</table>
+<img src="assets/about.svg" width="100%" alt="Senior Systems Analyst y tech lead de un equipo de seis personas. Desarrollo APIs, procesos ETL, herramientas de calidad de datos e integraciones con Python, SQL Server y Azure." />
 
-<p align="center"><sub>✦ ───────────────────────────── ✦</sub></p>
+<br/><br/>
 
-<h2>En qué me enfoco</h2>
+<img src="assets/title-stack.svg" width="100%" alt="02 / Stack" />
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/highlights?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&items=Python%3A%3ABackend%20y%20APIs%7CSQL%20Server%3A%3ADatos%20y%20reportes%7CAzure%3A%3ACloud%20y%20DevOps&variant=wow&v=wow-highlights-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/highlights?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&items=Python%3A%3ABackend%20y%20APIs%7CSQL%20Server%3A%3ADatos%20y%20reportes%7CAzure%3A%3ACloud%20y%20DevOps&variant=wow&v=wow-highlights-1&mode=dark" width="100%" alt="Áreas de foco" />
-</picture>
+<div align="center">
 
-<p align="center"><sub>✦ ───────────────────────────── ✦</sub></p>
+**Backend**<br/>
+<img src="https://img.shields.io/badge/Python-05070d?style=flat-square&logo=python&logoColor=60a5fa" alt="Python" />
+<img src="https://img.shields.io/badge/Django-05070d?style=flat-square&logo=django&logoColor=60a5fa" alt="Django" />
+<img src="https://img.shields.io/badge/FastAPI-05070d?style=flat-square&logo=fastapi&logoColor=60a5fa" alt="FastAPI" />
+<img src="https://img.shields.io/badge/Flask-05070d?style=flat-square&logo=flask&logoColor=60a5fa" alt="Flask" />
+<img src="https://img.shields.io/badge/JavaScript-05070d?style=flat-square&logo=javascript&logoColor=60a5fa" alt="JavaScript" />
 
-<h2>Herramientas</h2>
+**Datos**<br/>
+<img src="https://img.shields.io/badge/SQL_Server-05070d?style=flat-square&logo=microsoftsqlserver&logoColor=60a5fa" alt="SQL Server" />
+<img src="https://img.shields.io/badge/PostgreSQL-05070d?style=flat-square&logo=postgresql&logoColor=60a5fa" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/MySQL-05070d?style=flat-square&logo=mysql&logoColor=60a5fa" alt="MySQL" />
+<img src="https://img.shields.io/badge/Apache_Airflow-05070d?style=flat-square&logo=apacheairflow&logoColor=60a5fa" alt="Apache Airflow" />
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,django,fastapi,flask,postgres,mysql,azure,docker,git,js,html&theme=dark" alt="Stack tecnológico" />
-</p>
+**Cloud & DevOps**<br/>
+<img src="https://img.shields.io/badge/Azure-05070d?style=flat-square&logo=microsoftazure&logoColor=60a5fa" alt="Azure" />
+<img src="https://img.shields.io/badge/Docker-05070d?style=flat-square&logo=docker&logoColor=60a5fa" alt="Docker" />
+<img src="https://img.shields.io/badge/Azure_DevOps-05070d?style=flat-square&logo=azuredevops&logoColor=60a5fa" alt="Azure DevOps" />
+<img src="https://img.shields.io/badge/Git-05070d?style=flat-square&logo=git&logoColor=60a5fa" alt="Git" />
 
-<p align="center"><sub>Python · Django · FastAPI · Flask · SQL Server · PostgreSQL · MySQL · Azure · Docker · Apache Airflow · Azure DevOps</sub></p>
+</div>
 
-<p align="center"><sub>✦ ───────────────────────────── ✦</sub></p>
+<br/>
 
-<h2>Proyectos</h2>
-
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/projects?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&repos=gonzalezlazaro%2FEncuestas-Sistemas%2Cgonzalezlazaro%2Fapi-enlaces%2Cgonzalezlazaro%2Fapi%2Cgonzalezlazaro%2FWidget&variant=wow&v=wow-projects-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/projects?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&repos=gonzalezlazaro%2FEncuestas-Sistemas%2Cgonzalezlazaro%2Fapi-enlaces%2Cgonzalezlazaro%2Fapi%2Cgonzalezlazaro%2FWidget&variant=wow&v=wow-projects-1&mode=dark" width="100%" alt="Constelación de proyectos" />
-</picture>
+<img src="assets/title-proyectos.svg" width="100%" alt="03 / Proyectos" />
 
 <table width="100%">
 <tr>
-<td width="25%" valign="top"><p><strong><a href="https://github.com/GonzalezLazaro/Encuestas-Sistemas">Encuestas-Sistemas</a></strong></p><p>Sistema de encuestas para equipos internos.</p><p><sub>Python</sub></p></td>
-<td width="25%" valign="top"><p><strong><a href="https://github.com/GonzalezLazaro/api-enlaces">api-enlaces</a></strong></p><p>API de gestión de enlaces con interfaz web.</p><p><sub>HTML</sub></p></td>
-<td width="25%" valign="top"><p><strong><a href="https://github.com/GonzalezLazaro/api">api</a></strong></p><p>API REST en Python.</p><p><sub>Python</sub></p></td>
-<td width="25%" valign="top"><p><strong><a href="https://github.com/GonzalezLazaro/Widget">Widget</a></strong></p><p>Widget web embebible.</p><p><sub>HTML</sub></p></td>
+<td width="50%"><a href="https://github.com/GonzalezLazaro/Encuestas-Sistemas"><img src="assets/project-Encuestas-Sistemas.svg" width="100%" alt="Encuestas-Sistemas" /></a></td>
+<td width="50%"><a href="https://github.com/GonzalezLazaro/api-enlaces"><img src="assets/project-api-enlaces.svg" width="100%" alt="api-enlaces" /></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://github.com/GonzalezLazaro/api"><img src="assets/project-api.svg" width="100%" alt="api" /></a></td>
+<td width="50%"><a href="https://github.com/GonzalezLazaro/Widget"><img src="assets/project-Widget.svg" width="100%" alt="Widget" /></a></td>
 </tr>
 </table>
 
-<p align="center"><sub>✦ ───────────────────────────── ✦</sub></p>
+<br/>
 
-<h2>Actividad</h2>
+<img src="assets/title-actividad.svg" width="100%" alt="04 / Actividad" />
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stats?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&variant=wow&v=wow-stats-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/stats?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&variant=wow&v=wow-stats-1&mode=dark" width="100%" alt="Estadísticas de GitHub" />
-</picture>
+<img src="assets/stats.svg" width="100%" alt="Estadísticas de GitHub" />
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/heatmap?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&variant=wow&v=wow-heatmap-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/heatmap?username=gonzalezlazaro&theme=aurora&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F154262301%3Fu%3De1ea32fe3be5485d0ad07ae3788d5ed1acc4f714%26v%3D4&variant=wow&v=wow-heatmap-1&mode=dark" width="100%" alt="Mapa de contribuciones" />
-</picture>
+<img src="assets/languages.svg" width="100%" alt="Lenguajes más usados" />
 
-<p align="center"><sub>✦ ───────────────────────────── ✦</sub></p>
+<img src="assets/snake.svg" width="100%" alt="Contribuciones del último año" />
+
+<br/>
 
 <div align="center">
-<p><sub>SIGAMOS EN CONTACTO</sub></p>
-<h2>Construyamos algo útil</h2>
-<p>Siempre dispuesto a charlar sobre backend, ingeniería de datos y automatización.</p>
-<p><a href="https://github.com/gonzalezlazaro">GitHub</a></p>
-<p><sub>Secciones visuales hechas con <a href="https://www.gitskins.com/readme-generator">GitSkins</a></sub></p>
+<sub>Gráficos generados con Python y actualizados a diario por GitHub Actions · <a href="scripts/generate.py">ver el script</a></sub>
 </div>
