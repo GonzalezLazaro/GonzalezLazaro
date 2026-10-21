@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190" role="img" aria-label="Estadísticas de GitHub">
+  <style>
+    .cell { opacity: 0; animation: up .6s ease-out forwards; }
+    @keyframes up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  </style>
+  <rect width="1200" height="190" rx="16" fill="#05070d" stroke="#1a2f5a"/>
+  
+    <g class="cell" style="animation-delay:0.00s">
+      <rect x="32.0" y="24" width="272.0" height="142" rx="12" fill="#0a1224" stroke="#1a2f5a"/>
+      <rect x="32.0" y="24" width="4" height="142" rx="2" fill="#60a5fa"/>
+      <text x="58.0" y="64" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7" letter-spacing="1.5">CONTRIBUCIONES</text>
+      <text x="56.0" y="122" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="700" fill="#e6edf7">82</text>
+      <text x="58.0" y="148" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#4b6a9b">último año</text>
+    </g>
+    <g class="cell" style="animation-delay:0.15s">
+      <rect x="320.0" y="24" width="272.0" height="142" rx="12" fill="#0a1224" stroke="#1a2f5a"/>
+      <rect x="320.0" y="24" width="4" height="142" rx="2" fill="#3b82f6"/>
+      <text x="346.0" y="64" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7" letter-spacing="1.5">RACHA ACTUAL</text>
+      <text x="344.0" y="122" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="700" fill="#e6edf7">1</text>
+      <text x="346.0" y="148" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#4b6a9b">días</text>
+    </g>
+    <g class="cell" style="animation-delay:0.30s">
+      <rect x="608.0" y="24" width="272.0" height="142" rx="12" fill="#0a1224" stroke="#1a2f5a"/>
+      <rect x="608.0" y="24" width="4" height="142" rx="2" fill="#2563eb"/>
+      <text x="634.0" y="64" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7" letter-spacing="1.5">RACHA MÁXIMA</text>
+      <text x="632.0" y="122" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="700" fill="#e6edf7">2</text>
+      <text x="634.0" y="148" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#4b6a9b">días</text>
+    </g>
+    <g class="cell" style="animation-delay:0.45s">
+      <rect x="896.0" y="24" width="272.0" height="142" rx="12" fill="#0a1224" stroke="#1a2f5a"/>
+      <rect x="896.0" y="24" width="4" height="142" rx="2" fill="#1d4ed8"/>
+      <text x="922.0" y="64" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7" letter-spacing="1.5">REPOS PÚBLICOS</text>
+      <text x="920.0" y="122" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="700" fill="#e6edf7">5</text>
+      <text x="922.0" y="148" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#4b6a9b">0 ★</text>
+    </g>
+</svg>

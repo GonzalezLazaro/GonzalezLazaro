@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-label="Lenguajes más usados">
+  <defs><clipPath id="b"><rect x="32" y="58" width="1136" height="14" rx="7"/></clipPath></defs>
+  <style>
+    .grow { transform-origin: 32px 0; animation: grow 1.2s cubic-bezier(.2,.8,.2,1) forwards; transform: scaleX(0); }
+    @keyframes grow { to { transform: scaleX(1); } }
+  </style>
+  <rect width="1200" height="150" rx="16" fill="#05070d" stroke="#1a2f5a"/>
+  <text x="32" y="38" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7" letter-spacing="1.5">LENGUAJES EN REPOS PÚBLICOS</text>
+  <rect x="32" y="58" width="1136" height="14" rx="7" fill="#0a1224"/>
+  <g clip-path="url(#b)"><g class="grow"><rect x="32.0" y="58" width="607.0" height="14" fill="#60a5fa"/><rect x="642.0" y="58" width="508.3" height="14" fill="#3b82f6"/><rect x="1153.3" y="58" width="11.0" height="14" fill="#2563eb"/><rect x="1167.3" y="58" width="2.0" height="14" fill="#1d4ed8"/></g></g>
+  <circle cx="38" cy="108" r="6" fill="#60a5fa"/><text x="52" y="113" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#e6edf7">HTML</text><text x="98" y="113" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7">53.7%</text><circle cx="268" cy="108" r="6" fill="#3b82f6"/><text x="282" y="113" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#e6edf7">Python</text><text x="346" y="113" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7">45.0%</text><circle cx="498" cy="108" r="6" fill="#2563eb"/><text x="512" y="113" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#e6edf7">JavaScript</text><text x="612" y="113" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7">1.2%</text><circle cx="728" cy="108" r="6" fill="#1d4ed8"/><text x="742" y="113" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#e6edf7">Mako</text><text x="788" y="113" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7">0.1%</text>
+</svg>

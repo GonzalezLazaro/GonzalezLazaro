@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="70" viewBox="0 0 1200 70" role="img" aria-label="Proyectos">
+  <defs>
+    <linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></linearGradient>
+  </defs>
+  <style>
+    .sweep { animation: sweep 4s ease-in-out infinite; }
+    @keyframes sweep { 0% { transform: translateX(-200px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateX(1000px); opacity: 0; } }
+  </style>
+  <text x="4" y="40" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="15" fill="#60a5fa" letter-spacing="2">03 /</text>
+  <text x="64" y="42" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="700" fill="#e6edf7">Proyectos</text>
+  <line x1="4" y1="60" x2="1196" y2="60" stroke="#1a2f5a"/>
+  <line x1="4" y1="60" x2="420" y2="60" stroke="url(#l)" stroke-width="2"/>
+  <rect class="sweep" x="0" y="59" width="160" height="2" fill="#93c5fd" opacity=".8"/>
+</svg>
