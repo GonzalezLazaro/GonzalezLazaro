@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-label="Mapa de contribuciones">
   <style>
-    .hm { opacity: 0; animation: in .4s ease-out forwards; }
-    .hot { animation: in .4s ease-out forwards, glow 3s ease-in-out 2s infinite; }
-    @keyframes in { to { opacity: 1; } }
+    .hm { animation: in .4s ease-out backwards; }
+    .hot { animation: in .4s ease-out backwards, glow 3s ease-in-out 2s infinite; }
+    @keyframes in { from { opacity: 0; } to { opacity: 1; } }
     @keyframes glow { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
   </style>
   <rect width="1200" height="250" rx="20" fill="#04060b" stroke="#1a2f5a"/>

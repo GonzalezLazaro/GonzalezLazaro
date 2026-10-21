@@ -16,7 +16,7 @@
     .tw { animation: tw 3.2s ease-in-out infinite; }
     .blink { animation: blink 2.4s ease-in-out infinite; }
     .glitch { animation: glitch 6s steps(1) infinite; }
-    .up { opacity: 0; animation: up .7s ease-out forwards; }
+    .up { animation: up .7s ease-out backwards; }
     .scan { animation: scan 8s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
     @keyframes tw { 0%,100% { opacity: 1; } 50% { opacity: .2; } }

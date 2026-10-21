@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210" role="img" aria-label="Línea de tiempo de proyectos">
   <defs><linearGradient id="tl" x1="0" x2="1"><stop offset="0" stop-color="#13306b"/><stop offset="1" stop-color="#60a5fa"/></linearGradient></defs>
   <style>
-    .line { stroke-dasharray: 1060; stroke-dashoffset: 1060; animation: draw 1.6s ease-out forwards; }
-    .up { opacity: 0; animation: up .6s ease-out forwards; }
+    .line { stroke-dasharray: 1060; animation: draw 1.6s ease-out backwards; }
+    .up { animation: up .6s ease-out backwards; }
     .now { animation: blink 1.6s ease-in-out infinite; }
-    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes draw { from { stroke-dashoffset: 1060; } to { stroke-dashoffset: 0; } }
     @keyframes up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
     @keyframes blink { 50% { opacity: .2; } }
   </style>

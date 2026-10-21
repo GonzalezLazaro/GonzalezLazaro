@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="188" viewBox="0 0 1200 188" role="img" aria-label="Stack: Python, Django, FastAPI, Flask, SQL Server, PostgreSQL, MySQL, Apache Airflow, Azure, Docker, Azure DevOps, Git">
   <style>
-    .up { opacity: 0; animation: up .5s ease-out forwards; }
+    .up { animation: up .5s ease-out backwards; }
     .glint { opacity: 0; animation: glint 5.4s ease-in-out infinite; }
     @keyframes up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
     @keyframes glint { 0%,100% { opacity: 0; } 4% { opacity: 1; } 12% { opacity: 0; } }
