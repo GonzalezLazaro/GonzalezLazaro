@@ -8,6 +8,7 @@ Salida: assets/*.svg
 """
 from __future__ import annotations
 
+import base64
 import datetime as dt
 import io
 import json
@@ -330,23 +331,58 @@ def highlights() -> str:
 </svg>"""
 
 
+ICONS = {  # nombre -> (carpeta de devicon, variante)
+    "Python": ("python", "original"), "Django": ("django", "plain"), "FastAPI": ("fastapi", "original"),
+    "Flask": ("flask", "original"), "SQL Server": ("microsoftsqlserver", "original"),
+    "PostgreSQL": ("postgresql", "original"), "MySQL": ("mysql", "original"),
+    "Apache Airflow": ("apacheairflow", "original"), "Azure": ("azure", "original"),
+    "Docker": ("docker", "original"), "Azure DevOps": ("azuredevops", "original"), "Git": ("git", "original"),
+}
+# Colores de logos muy oscuros que no se verían sobre fondo negro
+RECOLOR = {"#010101": TEXT, "#092e20": "#44b78b", "#092E20": "#44b78b", "#00618A": "#6aa6d8", "#00618a": "#6aa6d8"}
+DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons"
+
+
+def icon_uri(name: str) -> str | None:
+    if name not in ICONS:
+        return None
+    slug, variant = ICONS[name]
+    fname = f"{slug}-{variant}.svg"
+    try:
+        local = os.environ.get("ICON_DIR")
+        raw = (Path(local) / slug / fname).read_bytes() if local else _req(f"{DEVICON}/{slug}/{fname}", accept="image/svg+xml")
+    except Exception as exc:  # noqa: BLE001
+        print(f"sin ícono para {name}: {exc}", file=sys.stderr)
+        return None
+    svg = raw.decode("utf-8")
+    for a, b in RECOLOR.items():
+        svg = svg.replace(a, b)
+    return "data:image/svg+xml;base64," + base64.b64encode(svg.encode()).decode()
+
+
 def stack() -> str:
-    w, per = 1200, 6
+    w, per = 1200, 4
     rows = (len(STACK) + per - 1) // per
-    h = 40 + rows * 74
-    cw = (w - 32 - (per - 1) * 12) / per
+    ch, gap = 80, 14
+    h = 32 + rows * (ch + gap) - gap
+    cw = (w - 32 - (per - 1) * gap) / per
     chips = []
     for i, name in enumerate(STACK):
         r, c = divmod(i, per)
-        x, y = 16 + c * (cw + 12), 20 + r * 74
+        x, y = 16 + c * (cw + gap), 16 + r * (ch + gap)
+        uri = icon_uri(name)
+        logo = (f'<rect x="{x + 16}" y="{y + 16}" width="48" height="48" rx="12" fill="{BG}" stroke="{BORDER}"/>'
+                f'<image href="{uri}" x="{x + 24}" y="{y + 24}" width="32" height="32"/>') if uri else \
+               f'<circle cx="{x + 40}" cy="{y + 40}" r="6" fill="{ACCENT_2}"/>'
         chips.append(
             f'<g class="up" style="animation-delay:{i * .06:.2f}s">'
-            f'<rect x="{x}" y="{y}" width="{cw}" height="58" rx="12" fill="{PANEL}" stroke="{BORDER}"/>'
-            f'<rect class="glint" style="animation-delay:{i * .45:.2f}s" x="{x}" y="{y}" width="{cw}" height="58" rx="12" fill="none" stroke="{ACCENT}" stroke-width="1.5"/>'
-            f'<circle cx="{x + 24}" cy="{y + 29}" r="5" fill="{ACCENT_2}"/>'
-            f'<text x="{x + 40}" y="{y + 34}" font-family="{MONO}" font-size="15" fill="{TEXT}">{e(name)}</text></g>')
+            f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="16" fill="url(#sg)" stroke="{BORDER}"/>'
+            f'<rect class="glint" style="animation-delay:{i * .45:.2f}s" x="{x}" y="{y}" width="{cw}" height="{ch}" rx="16" fill="none" stroke="{ACCENT}" stroke-width="1.5"/>'
+            f'{logo}'
+            f'<text x="{x + 80}" y="{y + 47}" font-family="{SANS}" font-size="19" font-weight="600" fill="{TEXT}">{e(name)}</text></g>')
     return f"""
 {card_open(w, h, "Stack: " + ", ".join(STACK))}
+  <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{PANEL}"/><stop offset="1" stop-color="{BG}"/></linearGradient></defs>
   <style>
     .up {{ animation: up .5s ease-out backwards; }}
     .glint {{ opacity: 0; animation: glint {len(STACK) * .45:.1f}s ease-in-out infinite; }}
