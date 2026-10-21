@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-label="Áreas de foco">
+  <defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f44"/><stop offset="1" stop-color="#04060b"/></linearGradient></defs>
+  <style>
+    .up { opacity: 0; animation: up .7s ease-out forwards; }
+    .bar { transform: scaleX(0); animation: grow 1.4s cubic-bezier(.2,.8,.2,1) forwards; }
+    .edge { stroke-dasharray: 140 1900; animation: run 7s linear infinite; }
+    @keyframes up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    @keyframes grow { to { transform: scaleX(1); } }
+    @keyframes run { to { stroke-dashoffset: -2040; } }
+  </style>
+  
+  <g class="up" style="animation-delay:0.0s">
+    <rect x="16.0" y="16" width="384.0" height="198" rx="16" fill="url(#cg)" stroke="#1a2f5a"/>
+    <rect class="edge" style="animation-delay:0.0s" x="16.0" y="16" width="384.0" height="198" rx="16" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="44.0" y="58" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#60a5fa">01 · FOCO ACTUAL</text>
+    <text x="42.0" y="118" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="700" fill="#e6edf7">Python</text>
+    <text x="44.0" y="152" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#8ba3c7">APIs, automatización y herramientas internas</text>
+    <rect x="44.0" y="178" width="328.0" height="4" rx="2" fill="#0a1224"/>
+    <rect class="bar" style="animation-delay:0.30s; transform-origin:44.0px 0" x="44.0" y="178" width="302" height="4" rx="2" fill="#3b82f6"/>
+  </g>
+  <g class="up" style="animation-delay:0.2s">
+    <rect x="408.0" y="16" width="384.0" height="198" rx="16" fill="url(#cg)" stroke="#1a2f5a"/>
+    <rect class="edge" style="animation-delay:1.3s" x="408.0" y="16" width="384.0" height="198" rx="16" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="436.0" y="58" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#60a5fa">02 · DATOS Y REPORTES</text>
+    <text x="434.0" y="118" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="700" fill="#e6edf7">SQL Server</text>
+    <text x="436.0" y="152" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#8ba3c7">Modelado, consultas avanzadas y ETL</text>
+    <rect x="436.0" y="178" width="328.0" height="4" rx="2" fill="#0a1224"/>
+    <rect class="bar" style="animation-delay:0.55s; transform-origin:436.0px 0" x="436.0" y="178" width="262" height="4" rx="2" fill="#3b82f6"/>
+  </g>
+  <g class="up" style="animation-delay:0.4s">
+    <rect x="800.0" y="16" width="384.0" height="198" rx="16" fill="url(#cg)" stroke="#1a2f5a"/>
+    <rect class="edge" style="animation-delay:2.6s" x="800.0" y="16" width="384.0" height="198" rx="16" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="828.0" y="58" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#60a5fa">03 · CLOUD Y DEVOPS</text>
+    <text x="826.0" y="118" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="700" fill="#e6edf7">Azure</text>
+    <text x="828.0" y="152" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#8ba3c7">Despliegues, Docker y Azure DevOps</text>
+    <rect x="828.0" y="178" width="328.0" height="4" rx="2" fill="#0a1224"/>
+    <rect class="bar" style="animation-delay:0.80s; transform-origin:828.0px 0" x="828.0" y="178" width="223" height="4" rx="2" fill="#3b82f6"/>
+  </g>
+</svg>

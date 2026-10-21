@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190" role="img" aria-label="Estadísticas de GitHub">
+  <style>
+    .up { opacity: 0; animation: up .6s ease-out forwards; }
+    .blink { animation: blink 2.4s ease-in-out infinite; }
+    @keyframes up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    @keyframes blink { 50% { opacity: .25; } }
+  </style>
+  <rect width="1200" height="190" rx="20" fill="#04060b" stroke="#1a2f5a"/>
+  
+  <g class="up" style="animation-delay:0.00s">
+    <rect x="32.0" y="24" width="272.0" height="142" rx="14" fill="#0a1224" stroke="#1a2f5a"/>
+    <text x="58.0" y="62" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#4b6a9b">CONTRIBUCIONES</text>
+    <circle cx="282.0" cy="58" r="3.5" fill="#3b82f6" class="blink" style="animation-delay:0.0s"/>
+    <text x="56.0" y="122" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="46" font-weight="700" fill="#e6edf7">84</text>
+    <text x="58.0" y="148" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" fill="#8ba3c7">último año</text>
+  </g>
+  <g class="up" style="animation-delay:0.15s">
+    <rect x="320.0" y="24" width="272.0" height="142" rx="14" fill="#0a1224" stroke="#1a2f5a"/>
+    <text x="346.0" y="62" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#4b6a9b">RACHA ACTUAL</text>
+    <circle cx="570.0" cy="58" r="3.5" fill="#3b82f6" class="blink" style="animation-delay:0.5s"/>
+    <text x="344.0" y="122" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="46" font-weight="700" fill="#e6edf7">1</text>
+    <text x="346.0" y="148" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" fill="#8ba3c7">días</text>
+  </g>
+  <g class="up" style="animation-delay:0.30s">
+    <rect x="608.0" y="24" width="272.0" height="142" rx="14" fill="#0a1224" stroke="#1a2f5a"/>
+    <text x="634.0" y="62" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#4b6a9b">RACHA MÁXIMA</text>
+    <circle cx="858.0" cy="58" r="3.5" fill="#3b82f6" class="blink" style="animation-delay:1.0s"/>
+    <text x="632.0" y="122" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="46" font-weight="700" fill="#e6edf7">2</text>
+    <text x="634.0" y="148" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" fill="#8ba3c7">días</text>
+  </g>
+  <g class="up" style="animation-delay:0.45s">
+    <rect x="896.0" y="24" width="272.0" height="142" rx="14" fill="#0a1224" stroke="#1a2f5a"/>
+    <text x="922.0" y="62" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#4b6a9b">DÍAS ACTIVOS</text>
+    <circle cx="1146.0" cy="58" r="3.5" fill="#3b82f6" class="blink" style="animation-delay:1.5s"/>
+    <text x="920.0" y="122" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="46" font-weight="700" fill="#e6edf7">25</text>
+    <text x="922.0" y="148" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" fill="#8ba3c7">último año</text>
+  </g>
+</svg>

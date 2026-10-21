@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Lazaro — Python / SQL Server / Azure — Córdoba, Argentina">
+  <defs>
+    <pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M 30 0 L 0 0 0 30" fill="none" stroke="#0b1f44" stroke-width="1" opacity="0.45"/></pattern>
+    <pattern id="px" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="4.6" height="4.6" fill="#e6edf7"/></pattern>
+    <pattern id="pxb" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="4.6" height="4.6" fill="#3b82f6"/></pattern>
+    <radialGradient id="glow" cx="0.7541666666666667" cy="0.4453125" r="0.42">
+      <stop offset="0" stop-color="#13306b" stop-opacity=".9"/>
+      <stop offset=".6" stop-color="#0b1f44" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#04060b" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="c"><rect width="1200" height="640" rx="22"/></clipPath>
+  </defs>
+  <style>
+    .spin { transform-origin: 905px 285px; animation: spin 50s linear infinite; }
+    .spin2 { transform-origin: 905px 285px; animation: spin 30s linear infinite reverse; }
+    .tw { animation: tw 3.2s ease-in-out infinite; }
+    .blink { animation: blink 2.4s ease-in-out infinite; }
+    .glitch { animation: glitch 6s steps(1) infinite; }
+    .up { opacity: 0; animation: up .7s ease-out forwards; }
+    .scan { animation: scan 8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes tw { 0%,100% { opacity: 1; } 50% { opacity: .2; } }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+    @keyframes glitch { 0%,92%,100% { transform: translate(0,0); opacity: .0; } 93% { transform: translate(4px,-2px); opacity: .7; } 95% { transform: translate(-3px,1px); opacity: .5; } 97% { transform: translate(2px,0); opacity: .6; } }
+    @keyframes up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @keyframes scan { from { transform: translateY(-40px); } to { transform: translateY(680px); } }
+  </style>
+  <g clip-path="url(#c)">
+    <rect width="1200" height="640" fill="#04060b"/>
+    <rect width="1200" height="640" fill="url(#g)"/>
+    <rect width="1200" height="640" fill="url(#glow)"/>
+    <rect class="scan" x="0" y="0" width="1200" height="2" fill="#3b82f6" opacity=".12"/>
+
+    <text x="56" y="70" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="3.5" fill="#4b6a9b">PERFIL / IDENTIDAD VIVA</text>
+    <text x="1144" y="70" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#60a5fa">@gonzalezlazaro</text>
+
+    <text x="56" y="170" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="14" letter-spacing="4" fill="#60a5fa">HOLA, MUNDO. SOY</text>
+    <text class="glitch" x="52" y="290" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="132" font-weight="800" fill="url(#pxb)">Lazaro</text>
+    <text x="52" y="290" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="132" font-weight="800" fill="url(#px)">Lazaro</text>
+    <text x="56" y="384" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" font-weight="700" fill="#e6edf7">Python / SQL Server / Azure</text>
+    <text x="56" y="414" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="13" fill="#8ba3c7">Córdoba, Argentina</text>
+
+    <circle cx="905" cy="285" r="230" fill="none" stroke="#1a2f5a"/>
+    <g class="spin"><circle cx="905" cy="285" r="214" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="160 520" opacity=".8"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(0 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(30 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(60 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(90 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(120 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(150 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(180 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(210 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(240 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(270 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(300 905 285)" opacity=".7"/><line x1="905" y1="67" x2="905" y2="77" stroke="#3b82f6" stroke-width="2" transform="rotate(330 905 285)" opacity=".7"/></g>
+    <g class="spin2"><circle cx="905" cy="285" r="190" fill="none" stroke="#13306b" stroke-width="1.2" stroke-dasharray="3 9"/></g>
+    <circle cx="905" cy="285" r="166" fill="#04060b" opacity=".55"/>
+    <text x="905" y="315" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="96" font-weight="700" fill="url(#px)">LG</text>
+
+    <line x1="56" y1="490" x2="1144" y2="490" stroke="#1a2f5a"/>
+    <g class="up" style="animation-delay:0.30s"><text x="56.0" y="548" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#4b6a9b">REPOSITORIOS</text><circle cx="304.0" cy="544" r="3.5" fill="#3b82f6" class="blink" style="animation-delay:0.0s"/><text x="56.0" y="596" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="40" font-weight="700" fill="#e6edf7">5</text></g><g class="up" style="animation-delay:0.45s"><text x="328.0" y="548" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#4b6a9b">ESTRELLAS</text><circle cx="576.0" cy="544" r="3.5" fill="#3b82f6" class="blink" style="animation-delay:0.5s"/><text x="328.0" y="596" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="40" font-weight="700" fill="#e6edf7">0</text></g><g class="up" style="animation-delay:0.60s"><text x="600.0" y="548" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#4b6a9b">CONTRIBUCIONES</text><circle cx="848.0" cy="544" r="3.5" fill="#3b82f6" class="blink" style="animation-delay:1.0s"/><text x="600.0" y="596" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="40" font-weight="700" fill="#e6edf7">84</text></g><g class="up" style="animation-delay:0.75s"><text x="872.0" y="548" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="2.5" fill="#4b6a9b">SEGUIDORES</text><circle cx="1120.0" cy="544" r="3.5" fill="#3b82f6" class="blink" style="animation-delay:1.5s"/><text x="872.0" y="596" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="40" font-weight="700" fill="#e6edf7">0</text></g>
+    <text x="1144" y="624" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="11" fill="#4b6a9b">github.com/GonzalezLazaro</text>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="639" rx="22" fill="none" stroke="#1a2f5a"/>
+</svg>

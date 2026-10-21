@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-label="Sigamos en contacto">
+  <defs><pattern id="g3" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M 30 0 L 0 0 0 30" fill="none" stroke="#0b1f44" stroke-width="1" opacity="0.4"/></pattern>
+    <radialGradient id="cg3" cx=".5" cy="1" r=".7"><stop offset="0" stop-color="#13306b" stop-opacity=".9"/><stop offset="1" stop-color="#04060b" stop-opacity="0"/></radialGradient>
+    <clipPath id="c3"><rect width="1200" height="230" rx="20"/></clipPath>
+  </defs>
+  <style>
+    .pill { animation: pulse 2.6s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { stroke-opacity: .4; } 50% { stroke-opacity: 1; } }
+  </style>
+  <g clip-path="url(#c3)">
+    <rect width="1200" height="230" fill="#04060b"/><rect width="1200" height="230" fill="url(#g3)"/><rect width="1200" height="230" fill="url(#cg3)"/>
+    <text x="600.0" y="58" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="12" letter-spacing="3.5" fill="#60a5fa">SIGAMOS EN CONTACTO</text>
+    <text x="600.0" y="106" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="700" fill="#e6edf7">Construyamos algo útil</text>
+    <text x="600.0" y="138" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#8ba3c7">Backend, ingeniería de datos y automatización.</text>
+    <rect class="pill" x="450.0" y="160" width="300" height="42" rx="21" fill="#0a1224" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="600.0" y="186" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace" font-size="14" fill="#e6edf7">github.com/GonzalezLazaro</text>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="229" rx="20" fill="none" stroke="#1a2f5a"/>
+</svg>
