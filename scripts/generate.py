@@ -36,10 +36,13 @@ SOFT = "#93c5fd"
 TEXT = "#e6edf7"
 MUTED = "#8ba3c7"
 DIM = "#4b6a9b"
+BLUE_STEPS = ["#93c5fd", "#60a5fa", "#3b82f6", "#2563eb"]
 LEVELS = [PANEL, "#0e2a5c", "#1d4ed8", "#3b82f6", "#93c5fd"]
 
-SANS = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif"
-MONO = "'JetBrains Mono', 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace"
+FONT = "'Space Grotesk', 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif"
+SANS = MONO = FONT
+FONT_URL = "https://cdn.jsdelivr.net/npm/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2"
+_FONT_CSS: str | None = None
 
 FOCUS = "Python / SQL Server / Azure"
 LOCATION = "Córdoba, Argentina"
@@ -76,8 +79,25 @@ def grid(pid: str, size: int = 32, op: float = 0.5) -> str:
             f'<path d="M {size} 0 L 0 0 0 {size}" fill="none" stroke="{NAVY}" stroke-width="1" opacity="{op}"/></pattern>')
 
 
+def font_css() -> str:
+    """@font-face con Space Grotesk incrustada (los SVG cargados como <img> no pueden pedir fuentes externas)."""
+    global _FONT_CSS
+    if _FONT_CSS is None:
+        try:
+            local = os.environ.get("FONT_FILE")
+            raw = Path(local).read_bytes() if local else _req(FONT_URL, accept="font/woff2")
+            b64 = base64.b64encode(raw).decode()
+            _FONT_CSS = ("@font-face { font-family: 'Space Grotesk'; font-weight: 300 700; "
+                         f"src: url(data:font/woff2;base64,{b64}) format('woff2'); }}")
+        except Exception as exc:  # noqa: BLE001
+            print(f"sin fuente: {exc}", file=sys.stderr)
+            _FONT_CSS = ""
+    return _FONT_CSS
+
+
 def card_open(w: int, h: int, label: str) -> str:
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{e(label)}">')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{e(label)}">'
+            f'<style>{font_css()}</style>')
 
 
 def fmt_month(iso: str) -> str:
@@ -555,7 +575,7 @@ def heatmap(u: dict, stats: dict) -> str:
 
 
 def contact() -> str:
-    w, h = 1200, 230
+    w, h = 1200, 270
     return f"""
 {card_open(w, h, "Sigamos en contacto")}
   <defs>{grid("g3", 30, .4)}
@@ -573,8 +593,129 @@ def contact() -> str:
     <text x="{w / 2}" y="138" text-anchor="middle" font-family="{SANS}" font-size="15" fill="{MUTED}">Backend, ingeniería de datos y automatización.</text>
     <rect class="pill" x="{w / 2 - 150}" y="160" width="300" height="42" rx="21" fill="{PANEL}" stroke="{ACCENT_2}" stroke-width="1.5"/>
     <text x="{w / 2}" y="186" text-anchor="middle" font-family="{MONO}" font-size="14" fill="{TEXT}">github.com/{USER}</text>
+    <text x="{w / 2}" y="244" text-anchor="middle" font-family="{FONT}" font-size="13" fill="{DIM}">Gráficos generados con Python y actualizados a diario por GitHub Actions</text>
   </g>
   <rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="20" fill="none" stroke="{BORDER}"/>
+</svg>"""
+
+
+
+# ---------- Textos del README como SVG (para usar la misma fuente) ----------
+TOPLINE = "LAZARO GONZALEZ · CÓRDOBA, ARGENTINA · EN VIVO"
+ROLE = "Analista de Sistemas Senior · Backend & Datos"
+BIO = ["Líder técnico de un equipo de seis personas. Desarrollo software en Python,",
+       "pipelines de datos e integraciones para el sector de medicina prepaga."]
+ABOUT = ["Diseño y pongo en producción sistemas internos de punta a punta:",
+         "APIs, herramientas de calidad de datos, procesos ETL y reportes",
+         "sobre grandes bases SQL Server."]
+ABOUT_TAGS = ["Python", "SQL Server", "Azure", "Airflow"]
+MOTTO = "Ingeniería pragmática, datos limpios y automatizar lo repetitivo."
+NOW = ["Liderando un equipo bajo Scrum", "Integraciones de mensajería y APIs",
+       "Migrando servicios a Azure", "Pipelines de datos con Airflow"]
+
+
+def topline() -> str:
+    w, h = 1200, 44
+    return f"""
+{card_open(w, h, TOPLINE)}
+  <text x="{w / 2}" y="28" text-anchor="middle" font-family="{FONT}" font-size="15" font-weight="500" letter-spacing="3" fill="{MUTED}">{e(TOPLINE)}</text>
+</svg>"""
+
+
+def intro() -> str:
+    w, h = 1200, 150
+    lines = "".join(f'<text x="{w / 2}" y="{84 + i * 26}" text-anchor="middle" font-family="{FONT}" font-size="18" fill="{MUTED}">{e(t)}</text>'
+                    for i, t in enumerate(BIO))
+    return f"""
+{card_open(w, h, ROLE + ". " + " ".join(BIO))}
+  <text x="{w / 2}" y="40" text-anchor="middle" font-family="{FONT}" font-size="24" font-weight="700" fill="{TEXT}">{e(ROLE)}<tspan fill="{ACCENT_2}" font-weight="500"> · {e(LOCATION)}</tspan></text>
+  {lines}
+</svg>"""
+
+
+def section_title(slug: str, num: str, title: str) -> None:
+    w, h = 1200, 96
+    write(f"title-{slug}.svg", f"""
+{card_open(w, h, title)}
+  <defs><linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="{ACCENT}"/><stop offset="1" stop-color="{ACCENT}" stop-opacity="0"/></linearGradient></defs>
+  <style>
+    .sweep {{ animation: sweep 5s ease-in-out infinite; }}
+    @keyframes sweep {{ 0% {{ transform: translateX(-200px); opacity: 0; }} 30% {{ opacity: 1; }} 100% {{ transform: translateX(1000px); opacity: 0; }} }}
+  </style>
+  <line x1="{w / 2 - 150}" y1="16" x2="{w / 2 + 150}" y2="16" stroke="{DIM}"/>
+  <rect x="{w / 2 - 154}" y="12" width="8" height="8" fill="{ACCENT_2}" transform="rotate(45 {w / 2 - 150} 16)"/>
+  <rect x="{w / 2 + 146}" y="12" width="8" height="8" fill="{ACCENT_2}" transform="rotate(45 {w / 2 + 150} 16)"/>
+  <text x="4" y="70" font-family="{FONT}" font-size="15" font-weight="500" letter-spacing="2" fill="{ACCENT_2}">{num}</text>
+  <text x="40" y="72" font-family="{FONT}" font-size="32" font-weight="700" fill="{TEXT}">{e(title)}</text>
+  <line x1="4" y1="88" x2="{w - 4}" y2="88" stroke="{BORDER}"/>
+  <line x1="4" y1="88" x2="420" y2="88" stroke="url(#l)" stroke-width="2"/>
+  <rect class="sweep" x="0" y="87" width="160" height="2" fill="{SOFT}" opacity=".8"/>
+</svg>""")
+
+
+def about() -> str:
+    w, h = 1200, 260
+    split = 740
+    left = "".join(f'<text x="40" y="{62 + i * 30}" font-family="{FONT}" font-size="19" fill="{TEXT}">{e(t)}</text>' for i, t in enumerate(ABOUT))
+    tx, tags = 112, []
+    for t in ABOUT_TAGS:
+        tw = 22 + 10.5 * len(t)
+        tags.append(f'<rect x="{tx}" y="160" width="{tw:.0f}" height="30" rx="8" fill="{NAVY}" stroke="{BORDER}"/>'
+                    f'<text x="{tx + tw / 2:.0f}" y="180" text-anchor="middle" font-family="{FONT}" font-size="15" font-weight="500" fill="{SOFT}">{e(t)}</text>')
+        tx += tw + 10
+    now = "".join(
+        f'<g class="up" style="animation-delay:{.2 + i * .15:.2f}s"><rect x="{split + 40}" y="{86 + i * 40}" width="8" height="8" rx="2" fill="{BLUE_STEPS[i]}" transform="rotate(45 {split + 44} {90 + i * 40})"/>'
+        f'<text x="{split + 64}" y="{96 + i * 40}" font-family="{FONT}" font-size="17" fill="{TEXT}">{e(t)}</text></g>'
+        for i, t in enumerate(NOW))
+    return f"""
+{card_open(w, h, "Quién soy: " + " ".join(ABOUT))}
+  <defs><linearGradient id="ag" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{PANEL}"/><stop offset="1" stop-color="{BG}"/></linearGradient></defs>
+  <style>
+    .up {{ animation: up .6s ease-out backwards; }}
+    .dot {{ animation: blink 2s ease-in-out infinite; }}
+    @keyframes up {{ from {{ opacity: 0; transform: translateX(-6px); }} to {{ opacity: 1; transform: none; }} }}
+    @keyframes blink {{ 50% {{ opacity: .25; }} }}
+  </style>
+  <rect width="{w}" height="{h}" rx="20" fill="url(#ag)" stroke="{BORDER}"/>
+  <line x1="{split}" y1="24" x2="{split}" y2="{h - 24}" stroke="{BORDER}"/>
+  {left}
+  <text x="40" y="181" font-family="{FONT}" font-size="16" font-weight="700" fill="{MUTED}">Foco:</text>
+  {''.join(tags)}
+  <text x="40" y="228" font-family="{FONT}" font-size="15" fill="{DIM}">{e(MOTTO)}</text>
+  <rect x="{split + 40}" y="34" width="84" height="28" rx="8" fill="{NAVY}" stroke="{BORDER}"/>
+  <circle class="dot" cx="{split + 56}" cy="48" r="4" fill="#22c55e"/>
+  <text x="{split + 68}" y="53" font-family="{FONT}" font-size="13" font-weight="700" letter-spacing="2" fill="{SOFT}">AHORA</text>
+  {now}
+</svg>"""
+
+
+def project_card(r: dict, i: int) -> str:
+    w, h = 290, 190
+    desc = r["description"] or DESCRIPTIONS.get(r["name"], "Proyecto en desarrollo")
+    words, lines, cur = desc.split(), [], ""
+    for wd in words:
+        if len(cur) + len(wd) + 1 > 26:
+            lines.append(cur)
+            cur = wd
+        else:
+            cur = f"{cur} {wd}".strip()
+    lines.append(cur)
+    lang = (r["primaryLanguage"] or {}).get("name", "—")
+    body = "".join(f'<text x="22" y="{86 + j * 22}" font-family="{FONT}" font-size="15" fill="{MUTED}">{e(t)}</text>' for j, t in enumerate(lines[:3]))
+    return f"""
+{card_open(w, h, r["name"] + ": " + desc)}
+  <defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{NAVY}"/><stop offset="1" stop-color="{BG}"/></linearGradient></defs>
+  <style>
+    .edge {{ stroke-dasharray: 90 900; animation: run 6s linear infinite; animation-delay: {i * 1.1:.1f}s; }}
+    @keyframes run {{ to {{ stroke-dashoffset: -990; }} }}
+  </style>
+  <rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="16" fill="url(#pg)" stroke="{BORDER}"/>
+  <rect class="edge" x="1" y="1" width="{w - 2}" height="{h - 2}" rx="16" fill="none" stroke="{ACCENT_2}" stroke-width="1.5"/>
+  <text x="22" y="48" font-family="{FONT}" font-size="20" font-weight="700" fill="{ACCENT_2}">{e(r["name"])}</text>
+  {body}
+  <circle cx="28" cy="{h - 28}" r="5" fill="{ACCENT}"/>
+  <text x="40" y="{h - 23}" font-family="{FONT}" font-size="14" font-weight="500" fill="{TEXT}">{e(lang)}</text>
+  <text x="{w - 22}" y="{h - 23}" text-anchor="end" font-family="{FONT}" font-size="13" fill="{DIM}">★ {r["stargazerCount"]}</text>
 </svg>"""
 
 
@@ -606,6 +747,15 @@ def main() -> None:
     write("momentum.svg", momentum(stats))
     write("heatmap.svg", heatmap(u, stats))
     write("contact.svg", contact())
+    write("topline.svg", topline())
+    write("intro.svg", intro())
+    write("about.svg", about())
+    for slug, num, title in [("quien-soy", "01", "Quién soy"), ("enfoque", "02", "En qué me enfoco"),
+                             ("herramientas", "03", "Herramientas"), ("proyectos", "04", "Proyectos"),
+                             ("actividad", "05", "Actividad")]:
+        section_title(slug, num, title)
+    for i, r in enumerate(feat):
+        write(f"project-{r['name']}.svg", project_card(r, i))
     print("ok")
 
 
