@@ -20,7 +20,7 @@
 <tr>
 <td width="62%" valign="top">
 <p>Diseño y pongo en producción sistemas internos de punta a punta: APIs, herramientas de calidad de datos, procesos ETL y reportes sobre grandes bases SQL Server.</p>
-<p><strong>Foco:</strong> `Python` · `SQL Server` · `Azure` · `Airflow`</p>
+<p><strong>Foco:</strong> <code>Python</code> · <code>SQL Server</code> · <code>Azure</code> · <code>Airflow</code></p>
 <p><sub>Ingeniería pragmática, datos limpios y automatizar lo repetitivo.</sub></p>
 </td>
 <td width="38%" valign="top">
